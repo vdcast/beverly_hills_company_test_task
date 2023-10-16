@@ -1,4 +1,4 @@
-package com.example.beverly_hills_company_test_task.ui.theme
+package com.example.beverly_hills_company_test_task.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build

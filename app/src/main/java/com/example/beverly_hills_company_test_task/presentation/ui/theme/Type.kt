@@ -1,4 +1,4 @@
-package com.example.beverly_hills_company_test_task.ui.theme
+package com.example.beverly_hills_company_test_task.presentation.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

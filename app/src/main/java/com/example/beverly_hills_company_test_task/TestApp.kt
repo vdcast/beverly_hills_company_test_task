@@ -12,7 +12,9 @@ import com.example.beverly_hills_company_test_task.presentation.ui.screens.Home
 import com.example.beverly_hills_company_test_task.presentation.ui.screens.Splash
 import com.example.beverly_hills_company_test_task.presentation.ui.screens.WebView
 import com.onesignal.OneSignal
+import dagger.hilt.android.HiltAndroidApp
 
+@HiltAndroidApp
 class TestApp : Application() {
     override fun onCreate() {
         super.onCreate()

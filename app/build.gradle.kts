@@ -53,6 +53,11 @@ android {
 }
 
 dependencies {
+    val room_version = "2.5.2"
+    implementation("androidx.room:room-runtime:$room_version")
+    ksp("androidx.room:room-compiler:$room_version")
+    implementation("androidx.room:room-ktx:$room_version")
+
     implementation("com.onesignal:OneSignal:4.8.6")
     implementation("com.facebook.android:facebook-android-sdk:16.2.0")
     implementation("com.appsflyer:af-android-sdk:6.12.3")

@@ -5,5 +5,6 @@ sealed class Routes(val route: String) {
     object Home : Routes("home")
     object Game : Routes("game")
     object WebView : Routes("webv")
-
+    object Records : Routes("records")
+    object About : Routes("about")
 }

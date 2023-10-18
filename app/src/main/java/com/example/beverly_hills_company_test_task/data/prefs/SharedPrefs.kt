@@ -1,4 +1,4 @@
-package com.example.beverly_hills_company_test_task.data
+package com.example.beverly_hills_company_test_task.data.prefs
 
 import android.content.Context
 import javax.inject.Inject

@@ -4,5 +4,17 @@
     <string name="webview">WebView</string>
     <string name="splash">Splash</string>
     <string name="splash_welcome">Welcome to the Game!</string>
-    <string name="loading">Loading...</string>
+    <string name="loading">Loading…</string>
+    <string name="about">About</string>
+    <string name="records">Records</string>
+    <string name="alert_1">Winner: %s</string>
+    <string name="alert_2">Sounds like a planned draw.</string>
+    <string name="game_over">Good job!</string>
+    <string name="alert_play_again">Play again</string>
+    <string name="alert_main_menu">Main menu</string>
+    <string name="alert_draw">It\'s a Draw!</string>
+    <string name="records_place">#</string>
+    <string name="records_date">Date</string>
+    <string name="records_time">Time</string>
+    <string name="records_level">Lvl</string>
 </resources>

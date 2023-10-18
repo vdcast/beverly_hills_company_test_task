@@ -5,10 +5,17 @@ import android.view.ViewGroup
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -17,7 +24,6 @@ import com.example.beverly_hills_company_test_task.domain.AppViewModel
 @Composable
 fun WebView(
     appViewModel: AppViewModel = hiltViewModel(),
-    onGameOpen: () -> Unit,
 ) {
     val urlToLoad by appViewModel.urlToLoad.collectAsState()
     WebViewScreen(url = urlToLoad, appViewModel = appViewModel)
@@ -29,8 +35,6 @@ fun WebViewScreen(
     url: String,
     appViewModel: AppViewModel
 ) {
-    appViewModel.setDefaultUrl()
-    appViewModel.updatePage()
 
     AndroidView(
         factory = { context ->

@@ -7,8 +7,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.beverly_hills_company_test_task.presentation.ui.navigation.Routes
+import com.example.beverly_hills_company_test_task.presentation.ui.screens.About
 import com.example.beverly_hills_company_test_task.presentation.ui.screens.Game
 import com.example.beverly_hills_company_test_task.presentation.ui.screens.Home
+import com.example.beverly_hills_company_test_task.presentation.ui.screens.Records
 import com.example.beverly_hills_company_test_task.presentation.ui.screens.Splash
 import com.example.beverly_hills_company_test_task.presentation.ui.screens.WebView
 import com.onesignal.OneSignal
@@ -41,7 +43,7 @@ fun TestAppUi(
 
     NavHost(
         navController = navController,
-        startDestination = Routes.Home.route
+        startDestination = Routes.Splash.route
     ) {
         composable(Routes.Splash.route) {
             Splash(
@@ -49,7 +51,7 @@ fun TestAppUi(
                     navController.popBackStack()
                     navController.navigate(Routes.WebView.route)
                 },
-                onGameOpen = {
+                onHomeOpen = {
                     navController.popBackStack()
                     navController.navigate(Routes.Home.route)
                 }
@@ -58,8 +60,8 @@ fun TestAppUi(
         composable(Routes.Home.route) {
             Home(
                 onGameCLick = { navController.navigate(Routes.Game.route) },
-                onWebViewClick = { navController.navigate(Routes.WebView.route) },
-                onSplashClick = { navController.navigate(Routes.Splash.route) },
+                onRecordsClick = { navController.navigate(Routes.Records.route) },
+                onAboutClick = { navController.navigate(Routes.About.route) },
                 )
         }
         composable(Routes.Game.route) {
@@ -68,12 +70,13 @@ fun TestAppUi(
             )
         }
         composable(Routes.WebView.route) {
-            WebView(
-                onGameOpen = {
-                    navController.popBackStack()
-                    navController.navigate(Routes.Home.route)
-                }
-            )
+            WebView()
+        }
+        composable(Routes.Records.route) {
+            Records()
+        }
+        composable(Routes.About.route) {
+            About()
         }
     }
 }
